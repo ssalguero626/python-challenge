@@ -27,11 +27,11 @@ with open(file, 'r') as csvfile:
 # Print out solutions
 print("Financial Analysis")
 print("----------------------")
-print(f"Total Months:{len(month_count)}")
+print(f"Total Months: {len(month_count)} ")
 print(f"Total: ${sum(profit)}")
 print(f"Average Change: {round(sum(change_profit)/len(change_profit),2)}")
 print(f"Greatest Increase in Profits: {month_count[month_increase]} (${(str(increase))})")
-print(f"Greatest Decrease in Profits: {month_count[month_increase]} (${(str(decrease))})")   
+print(f"Greatest Decrease in Profits: {month_count[month_decrease]} (${(str(decrease))})")   
 
 
 # 
@@ -49,4 +49,4 @@ with open(excel_data_output, "w") as new:
     new.write("\n")
     new.write(f"Greatest Increase in Profits: {month_count[month_increase]} (${(str(increase))})")
     new.write("\n")
-    new.write(f"Greatest Increase in Profits: {month_count[month_increase]} (${(str(increase))})")
+    new.write(f"Greatest Decrease in Profits: {month_count[month_decrease]} (${(str(decrease))})")
