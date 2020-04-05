@@ -5,11 +5,11 @@ file = os.path.join("Resources", "budget_data.csv")
 with open(file, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
     header = next(csvreader)
-
+# Create list to add to the csv values
     month_count = []
     profit = []
     change_profit = []
-
+# Loop through the values and add them to the empty list
     for row in csvreader:
         month_count.append(row[0])
         profit.append(int(row[1]))
